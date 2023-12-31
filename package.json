@@ -1,0 +1,27 @@
+{
+  "name": "pixel",
+  "version": "1.0.0",
+  "description": "Introducing Pixel Wallpapers, your go-to app for an immersive visual experience on your device! Elevate your screen aesthetics with a stunning collection of high-quality, pixel-perfect wallpapers that cater to every style and mood.",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Shubham raj",
+  "license": "ISC",
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "parcel": "^2.10.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.21.1",
+    "react-spinners": "^0.13.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@parcel/transformer-sass": "^2.10.3",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "process": "^0.11.10"
+  }
+}

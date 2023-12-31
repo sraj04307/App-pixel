@@ -1,0 +1,41 @@
+@import "../../../screensize.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .gridloader{
+        display: flex;
+        justify-content:center;
+        margin-top: 10%;
+
+    }
+    .Home-container{
+        width: auto;
+        margin: 20px 20px;
+        columns: 2;
+        
+
+        @include md{
+            margin: 20px 20px;
+            columns:3;
+        }
+        @include lg{
+            margin: 20px 200px;
+            columns:4;
+        }
+        .Imagecard-container{
+            width: auto;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+        } 
+    }    
+
+    .pagechange-container{
+        text-align: center;
+    }
+}

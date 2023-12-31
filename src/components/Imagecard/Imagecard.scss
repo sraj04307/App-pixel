@@ -1,0 +1,123 @@
+@import "./../../../screensize.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+  .Image-container {
+    //background-color:  rgb(192, 192, 192);
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    .Image {
+      position: relative;
+      display: flex;
+      @include lg{
+        width: 100%;
+      }
+    
+      .false-img{
+        width: 300px;
+        height: inherit;
+      }
+
+      img {
+        width: 300px;
+        transition: transform 0.3s ease;
+      }
+
+      .Image-text {
+        position: absolute;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        height: 100%;
+
+        .text-container {
+          padding: 10px;
+
+          .text {
+            display: flex;
+            justify-content: space-between;
+
+            .text-icon {
+              text-wrap: nowrap;
+              overflow-x: hidden;
+              margin-right: 10px;
+              color: white;
+
+              @include md{
+                margin-right: 20px;
+              }
+              @include lg{
+                margin-right: 30px;
+              }
+
+              a {
+                text-decoration: none;
+                color: inherit;
+                opacity: 0;
+                font-size: 10px;
+                p {
+                  
+                  @include md{
+                    font-size: 15px;
+                  }
+                  @include lg{
+                    font-size: 20px;
+                  }
+                  
+                }
+              }
+            }
+
+            .icon {
+              opacity: 0;
+              padding: 2px 10px;
+              color: white;
+
+                svg{
+                  size: 30;
+                }
+              &:hover {
+                background-color: white;
+                color: black;
+                border-radius: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .Image {
+        img {
+          transform: scale(1.2);
+        }
+
+        .Image-text {
+          background-color: rgba(0, 0, 0, 0.5);
+
+          .text-container {
+            .text {
+              .text-icon {
+                a {
+                  opacity: 1;
+                  
+                }
+              }
+
+              .icon {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
